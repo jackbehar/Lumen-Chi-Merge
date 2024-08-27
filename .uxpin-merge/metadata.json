@@ -1,0 +1,277 @@
+{
+  "categorizedComponents": [
+    {
+      "components": [
+        {
+          "info": {
+            "dirPath": "src/components/_uxPin/Button",
+            "implementation": {
+              "framework": "reactjs",
+              "path": "src/components/_uxPin/Button/Button.jsx",
+              "lang": "javascript"
+            },
+            "presets": [
+              {
+                "path": "src/components/_uxPin/Button/presets/0-default.jsx"
+              }
+            ]
+          },
+          "defaultExported": true,
+          "name": "Button",
+          "componentDescription": "Buttons are used to trigger actions in forms, modals, and more.",
+          "componentDocUrl": "https://lib.lumen.com/chi/6.3.0/components/button/",
+          "properties": [
+            {
+              "description": "Children components inside the Button",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Alternative text in case of icon buttons",
+              "isRequired": false,
+              "name": "alternativeText",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Center align the text",
+              "isRequired": false,
+              "name": "center",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Set button color (primary, secondary, danger, dark, light)",
+              "isRequired": false,
+              "name": "color",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "primary"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "secondary"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "danger"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "dark"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "light"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Disable the button",
+              "isRequired": false,
+              "name": "disabled",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Render a button to fill the parent space",
+              "isRequired": false,
+              "name": "fluid",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Set button size (xs, sm, md, lg, xl)",
+              "isRequired": false,
+              "name": "size",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "xs"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "sm"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "md"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "lg"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "xl"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Set button type (float, close, icon)",
+              "isRequired": false,
+              "name": "type",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "float"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "close"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "icon"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Render a button with uppercase text",
+              "isRequired": false,
+              "name": "uppercase",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Set variant of a button (outline, flat)",
+              "isRequired": false,
+              "name": "variant",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "outline"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "flat"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Custom event when the button is clicked",
+              "isRequired": false,
+              "name": "onChiClick",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Custom event when the mouse pointer is moved onto the button",
+              "isRequired": false,
+              "name": "onChiMouseEnter",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Custom event when the mouse pointer is moved out of the button",
+              "isRequired": false,
+              "name": "onChiMouseLeave",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [],
+          "documentation": {
+            "examples": []
+          },
+          "presets": [
+            {
+              "elements": {
+                "button": {
+                  "name": "Button",
+                  "props": {
+                    "color": "primary",
+                    "children": "Primary"
+                  }
+                }
+              },
+              "name": "default",
+              "rootId": "button"
+            }
+          ]
+        }
+      ],
+      "name": "UXPIN ADDED"
+    }
+  ],
+  "name": "Example Design System",
+  "vcs": {
+    "branchName": "master",
+    "commitHash": "7f6a4130e38bcf39e78838dd4268a2695946cf6e",
+    "paths": {
+      "configPath": "/Users/jackbehar/Documents/Repos/Lumen-Chi-Merge/uxpin.config.js",
+      "projectRoot": "/Users/jackbehar/Documents/Repos/Lumen-Chi-Merge"
+    }
+  }
+}

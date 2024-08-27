@@ -1,0 +1,392 @@
+/* eslint-disable */
+/* Common */
+export const ACTIVE_CLASS = '-active';
+export const COMPLETED_CLASS = '-completed';
+export const CLOSED_CLASS = '-closed';
+export const CLOSE_CLASS = '-close';
+export const INFO_CLASS = '-info';
+export const LIGHT_CLASS = '-light';
+export const LIST_CLASS = '-list';
+export const DISABLED_CLASS = '-disabled';
+export const INVERSE_CLASS = '-inverse';
+export const ANIMATED_CLASS = '-animated';
+export const ANIMATE_CHEVRON_CLASS = '-animate';
+export const PORTAL_CLASS = '-portal';
+export const VERTICAL_CLASS = '-vertical';
+export const TRANSITIONING_CLASS = '-transitioning';
+export const SR_ONLY_CLASS = '-sr--only';
+export const UX_PIN_WRAPPER = 'uxPin__wrapper';
+export const NO_HOVER_UNDERLINE = '-no-hover-underline';
+export const OVERFLOW_HIDDEN = '-overflow--hidden';
+export const CHEVRON_RIGHT = 'chevron-right';
+export const ROW_CLASS = '-row';
+export const GENERIC_SIZES = {
+  XS: '-xs',
+  SM: '-sm',
+  MD: '-md',
+  LG: '-lg',
+  XL: '-xl',
+};
+
+/* Alert */
+export const ALERT_CLASSES = {
+  ALERT: 'chi-alert',
+  CLOSE_BUTTON: 'chi-alert__close-button',
+  CONTENT: 'chi-alert__content',
+  ICON: 'chi-alert__icon',
+  TEXT: 'chi-alert__text',
+  TITLE: 'chi-alert__title',
+};
+
+/* Backdrop */
+export const BACKDROP_CLASSES = {
+  BACKDROP: 'chi-backdrop',
+  WRAPPER: 'chi-backdrop__wrapper'
+};
+
+/* Button */
+export const BUTTON_CLASSES = {
+  BUTTON: 'chi-button',
+  ICON_BUTTON: '-icon',
+  CONTENT: 'chi-button__content',
+  FLAT: '-flat',
+  PRIMARY: '-primary'
+};
+
+/* Button Group */
+export const BUTTON_GROUP_CLASSES = 'chi-button-group';
+
+/* Checkbox */
+export const CHECKBOX_CLASSES = {
+  checkbox: 'chi-checkbox',
+  INPUT: 'chi-checkbox__input',
+  LABEL: 'chi-checkbox__label',
+};
+
+/* Drawer */
+export const DRAWER_CLASSES = {
+  DRAWER: 'chi-drawer',
+  HEADER: 'chi-drawer__header',
+  TITLE: 'chi-drawer__title',
+  CONTENT: 'chi-drawer__content'
+};
+
+export const FOOTER_CLASSES = {
+  FOOTER: 'chi-footer',
+  FOOTER_CONTENT: 'chi-footer__content',
+  FOOTER_HEADER: 'chi-footer__header',
+  FOOTER_INTERNAL: 'chi-footer__internal',
+  FOOTER_INTERNAL_CONTENT: 'chi-footer__internal-content',
+  FOOTER_EXTERNAL: 'chi-footer__external',
+  FOOTER_EXTERNAL_CONTENT: 'chi-footer__external-content',
+  FOOTER_LINKS: 'chi-footer__links',
+  FOOTER_LINKS_TITLE: 'chi-footer__links-title',
+  FOOTER_COPYRIGHT: 'chi-footer__copyright',
+  FOOTER_LANGUAGE: 'chi-footer__language',
+  FOOTER_SOCIAL: 'chi-footer__social',
+  FOOTER_SEARCH: 'chi-footer__search',
+  FOOTER_SEARCH_INPUT: 'chi-footer-search-input',
+};
+
+/* Icon */
+export const ICON_CLASS = 'chi-icon';
+
+/* Icon classes */
+export const ICON_CLASSES = {
+  ICON_CIRCLE_INFO: 'circle-info-outline',
+  ICON_PRIMARY: '-icon--primary',
+  ICON_RIGHT: '-icon--right'
+};
+
+/* Checkbox inline */
+export const INLINE_CLASS = '-inline';
+
+/* Pagination */
+export const PAGINATION_CLASSES = {
+  PAGINATION: 'chi-pagination',
+  RESULTS: 'chi-pagination__results',
+  COMPACT: '-compact',
+  CONTENT: 'chi-pagination__content',
+  LABEL: 'chi-pagination__label',
+  PAGE_SIZE: 'chi-pagination__page-size',
+  START: 'chi-pagination__start',
+  CENTER: 'chi-pagination__center',
+  END: 'chi-pagination__end',
+  JUMPER: 'chi-pagination__jumper'
+};
+
+/* Input */
+export const INPUT_CLASS = 'chi-input';
+
+/* Tooltip */
+export const TOOLTIP_CLASSES = {
+  TOOLTIP_ELEMENT: 'chi-tooltip'
+};
+
+/* Data Table */
+export const DATA_TABLE_CLASSES = {
+  DATA_TABLE: 'chi-data-table',
+  HEAD: 'chi-data-table__head',
+  BODY: 'chi-data-table__body',
+  ROW: 'chi-data-table__row',
+  ROW_CHILD: 'chi-data-table__row-child',
+  EMPTY: 'chi-data-table__row-empty',
+  CELL: 'chi-data-table__cell',
+  FOOTER: 'chi-data-table__footer',
+  EXPANDABLE: '-expandable',
+  SELECTABLE: '-selectable',
+  PORTAL: '-portal',
+  BORDERED: '-bordered',
+  NO_BORDER: '-no-border',
+  HOVER: '-hover',
+  STRIPED: '-striped',
+  SORTING: '-sorting',
+  COMPACT: '-compact'
+};
+
+/* Utility Classes */
+export const UTILITY_CLASSES = {
+  JUSTIFY: {
+    CENTER: '-justify-content--center',
+    MD: {
+      START: '-justify-content-md--start',
+      CENTER: '-justify-content-md--center',
+      END: '-justify-content-md--end'
+    }
+  },
+  ALIGN_ITEMS: {
+    CENTER: '-align-items--center',
+  },
+  DISPLAY: {
+    BLOCK: '-d--block',
+    FLEX: '-d--flex',
+    FLEX_ROW: '-flex--row',
+    FLEX_COLUMN: '-flex--column',
+    NONE: '-d--none',
+  },
+  TYPOGRAPHY: {
+    TEXT_PRIMARY: '-text--primary',
+    TEXT_TRUNCATE: '-text--truncate',
+    TEXT_NORMAL: '-text--normal',
+    TEXT_SEMI_BOLD: '-text--semi-bold',
+    TEXT_BOLD: '-text--bold',
+    TEXT_NO_TRANSFORM: '-text--no-transform',
+    TEXT_BODY: '-text--body',
+  },
+  GRID: 'chi-grid',
+  COLUMN: 'chi-col',
+  MARGIN: {
+    1: '-m--1',
+    2: '-m--2',
+    3: '-m--3',
+    4: '-m--4',
+    X: {
+      1: '-mx--1',
+      2: '-mx--2',
+      3: '-mx--3',
+      4: '-mx--4',
+    },
+    Y: {
+      1: '-my--1',
+      2: '-my--2',
+      3: '-my--3',
+      4: '-my--4',
+    },
+    LEFT: {
+      AUTO: '-ml--auto',
+      0: '-ml--0',
+      1: '-ml--1',
+      2: '-ml--2',
+      3: '-ml--3',
+      4: '-ml--4',
+    },
+    RIGHT: {
+      0: '-mr--0',
+      1: '-mr--1',
+      2: '-mr--2',
+      3: '-mr--3',
+      4: '-mr--4',
+    },
+    TOP: {
+      0: '-mt--0',
+      1: '-mt--1',
+      2: '-mt--2',
+      3: '-mt--3',
+      4: '-mt--4',
+    },
+    BOTTOM: {
+      1: '-mb--1',
+      2: '-mb--2',
+      3: '-mb--3',
+      4: '-mb--4',
+    },
+  },
+  PADDING: {
+    LEFT: {
+      0: '-pl--0',
+      1: '-pl--1',
+      2: '-pl--2',
+      3: '-pl--3',
+      4: '-pl--4',
+    },
+    RIGHT: {
+      0: '-pr--0',
+      1: '-pr--1',
+      2: '-pr--2',
+      3: '-pr--3',
+      4: '-pr--4',
+    },
+    BOTTOM: {
+      0: '-pb--0',
+      1: '-pb--1',
+      2: '-pb--2',
+      3: '-pb--3',
+      4: '-pb--4',
+    },
+  },
+  TEXT: {
+    TWO_XS: '-text--2xs',
+    XS: '-text--xs',
+    SM: '-text--sm',
+    MD: '-text--md',
+    LG: '-text--lg',
+    XL: '-text--xl',
+    LEFT: '-text--left',
+  },
+  WIDTH : {
+    12: '-w--12',
+    100: '-w--100',
+    MD: {
+      6: '-w-md--6',
+    },
+    LG: {
+      3: '-w-lg--3',
+    }
+  },
+  Z_INDEX: {
+    Z_10: '-z--10',
+    Z_30: '-z--30',
+    Z_40: '-z--40',
+  },
+};
+
+/* Tooltip */
+export const STAT_CLASSES = {
+  STAT: 'chi-stat',
+  ITEM: 'chi-stat__item',
+  BACKGROUND_ICON: 'chi-stat-background-icon',
+  COMPACT: '-compact',
+  CONTENT: 'chi-stat__content',
+  METRIC: 'chi-stat-metric',
+  METRIC_VALUE: 'chi-stat-metric__value',
+  METRIC_TITLE: 'chi-stat-metric__title',
+  TITLE: 'chi-stat-metric__title',
+  TITLE_HELP: 'chi-label__help',
+  SUBMETRIC: 'chi-stat-submetric',
+  SUBMETRIC_VALUE: 'chi-stat-submetric__value',
+  SUBMETRIC_TITLE: 'chi-stat-submetric__title',
+};
+
+/* Carousel */
+export const CAROUSEL_CLASSES = {
+  CAROUSEL: 'chi-carousel__item',
+}
+
+/* Popover */
+export const POPOVER_CLASSES = {
+  POPOVER: 'chi-popover',
+  CONTENT: 'chi-popover__content',
+  TEXT: 'chi-popover__text'
+};
+
+/* Form */
+export const FORM_CLASSES = {
+  ITEM: 'chi-form__item',
+};
+
+/* Label */
+export const LABEL_CLASSES = {
+  LABEL: 'chi-label',
+  REQUIRED: 'chi-label__required',
+  OPTIONAL: 'chi-label__optional',
+  WRAPPER: 'chi-label__wrapper',
+  HELP: 'chi-label__help',
+};
+
+/* Picker */
+export const PICKER_CLASSES = {
+  CHECKBOX: 'chi-picker__checkbox',
+  CONTENT_START: 'chi-picker__content--start',
+  DESCRIPTION: 'chi-picker__description',
+  INPUT: 'chi-picker__input',
+  LABEL: 'chi-picker__label',
+  PICKER: 'chi-picker',
+  RADIO: 'chi-picker__radio',
+};
+
+/* Picker Group */
+export const PICKER_GROUP_CLASSES = {
+  FLUID: '-fluid',
+  PICKER: 'chi-picker-group',
+  CONTENT: 'chi-picker-group__content',
+  INPUT: 'chi-picker__input',
+  LABEL: 'chi-picker-label',
+  LABEL_WRAPPER: 'chi-picker-label__wrapper',
+};
+
+/* Radio */
+export const RADIO_CLASSES = {
+  RADIO: 'chi-radio',
+  INPUT: 'chi-radio__input',
+  LABEL: 'chi-radio__label'
+};
+
+/* Price */
+export const PRICE_CLASSES = {
+  PRICE: 'chi-price'
+}
+/* Dropdown */
+export const DROPDOWN_CLASSES = {
+  DROPDOWN: 'chi-dropdown',
+  TRIGGER: 'chi-dropdown__trigger',
+  MENU: 'chi-dropdown__menu',
+  ITEM: 'chi-dropdown__menu-item',
+  ITEM_TITLE: 'chi-dropdown__menu-item_title',
+  ITEM_DESCRIPTION: 'chi-dropdown__menu-item_text',
+  ICON_CHEVRON_RIGHT: 'chevron-right'
+};
+
+/* Skeleton */
+export const SKELETON_CLASSES = {
+  SKELETON: 'chi-skeleton',
+};
+
+/* Tabs  */
+export const TABS_CLASSES = {
+  BORDER: '-border',
+  SOLID: '-solid',
+  TABS: 'chi-tabs',
+}
+
+/* Steps */
+export const STEPS_CLASSES = {
+  STEPS: 'chi-steps',
+  ICON: 'chi-steps__icon',
+  ITEM: 'chi-steps__item',
+  ITEM_TITLE: 'chi-steps__item-title',
+  CONTENT: 'chi-steps__content',
+  LINE: 'chi-steps__line',
+  HORIZONTAL_LABEL: '-horizontal-label'
+};
+
+/* Spinner */
+export const SPINNER_CLASSES = {
+  SPINNER: 'chi-spinner',
+}
+
+/* Link */
+export const LINK_CLASSES = {
+  LINK: 'chi-link',
+}
+
+/* eslint-enable */
