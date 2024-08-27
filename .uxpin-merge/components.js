@@ -13,7 +13,7 @@ import Carousel from '../src/components/_uxPin/Carousel/Carousel';
 import ButtonGroup from '../src/components/_uxPin/ButtonGroup/ButtonGroup';
 import Modal from '../src/components/_uxPin/Modal/Modal';
 import PrimaryButton from '../src/components/Primary-button/Primary-button';
-import SecondaryButton from '../src/components/Secondary-button/Secondary-button';
+import Car from '../src/components/Secondary-button/Secondary-button';
 import TertiaryButton from '../src/components/Tertiary-button/Tertiary-button';
 import FlatButton from '../src/components/Flat-button/Flat-button';
 import FloatingButton from '../src/components/Floating-button/Floating-button';
@@ -85,7 +85,7 @@ export {
   ButtonGroup,
   Modal,
   PrimaryButton,
-  SecondaryButton,
+  Car,
   TertiaryButton,
   FlatButton,
   FloatingButton,

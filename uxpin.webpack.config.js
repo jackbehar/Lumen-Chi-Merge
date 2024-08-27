@@ -9,9 +9,9 @@ module.exports = {
   },
   resolve: {
     modules: [__dirname, "node_modules"],
-    extensions: [".*", ".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx"],
   },
-  devtool: "eval-source-map",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -29,10 +29,17 @@ module.exports = {
         ],
       },
       {
+        test: /\.(js|jsx)$/,
+        exclude: /nodeModules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
         loader: require.resolve("babel-loader", {
           paths: ["./node_modules/@uxpin/merge-cli"],
         }),
-        test: /\.(js|jsx)$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         options: {
           presets: [

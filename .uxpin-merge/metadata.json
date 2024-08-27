@@ -2012,144 +2012,22 @@
             ]
           },
           "defaultExported": true,
-          "name": "SecondaryButton",
+          "name": "Car",
           "properties": [
             {
               "description": "",
               "isRequired": false,
-              "name": "disabled",
+              "name": "children",
               "defaultValue": {
-                "value": false
+                "value": "SPORTS CAR"
               },
               "type": {
-                "name": "boolean",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "leftIcon",
-              "type": {
                 "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "rightIcon",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "spinner",
-              "type": {
-                "name": "boolean",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "size",
-              "defaultValue": {
-                "value": "md"
-              },
-              "type": {
-                "name": "union",
-                "structure": {
-                  "elements": [
-                    {
-                      "name": "literal",
-                      "structure": {
-                        "value": "xs"
-                      }
-                    },
-                    {
-                      "name": "literal",
-                      "structure": {
-                        "value": "md"
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "value",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "fluid",
-              "type": {
-                "name": "boolean",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "click",
-              "type": {
-                "name": "func",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "mouseDown",
-              "type": {
-                "name": "func",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "mouseUp",
-              "type": {
-                "name": "func",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "mouseOver",
-              "type": {
-                "name": "func",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "mouseLeave",
-              "type": {
-                "name": "func",
                 "structure": {}
               }
             }
           ],
-          "wrappers": [
-            {
-              "name": "SkipContainerWrapper",
-              "type": "builtIn"
-            }
-          ],
+          "wrappers": [],
           "documentation": {
             "examples": []
           },
@@ -2157,7 +2035,7 @@
             {
               "elements": {
                 "secondary-button": {
-                  "name": "SecondaryButton",
+                  "name": "Car",
                   "props": {
                     "disabled": false,
                     "leftIcon": "",
@@ -24896,7 +24774,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "63e0af2f82442ddb3df51df08faa8d24a45d3e2f",
+    "commitHash": "280365c34f2668c1175906596ea574a9679c9a85",
     "paths": {
       "configPath": "/Users/jackbehar/Documents/Repos/Lumen-Chi-Merge/uxpin.config.js",
       "projectRoot": "/Users/jackbehar/Documents/Repos/Lumen-Chi-Merge"
