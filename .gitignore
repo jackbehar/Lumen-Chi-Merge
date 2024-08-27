@@ -51,7 +51,7 @@ typings/
 .eslintcache
 
 # Optional REPL history
-.node_repl_history
+.node_repl_history 
 
 # Output of 'npm pack'
 *.tgz
