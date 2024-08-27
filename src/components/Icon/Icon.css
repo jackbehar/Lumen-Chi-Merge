@@ -1,0 +1,8 @@
+i.chi-icon::before {
+    left: 0 !important;
+    top: 0 !important;
+}
+
+.chi-icon {
+    vertical-align: top;
+}
