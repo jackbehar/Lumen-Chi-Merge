@@ -24774,7 +24774,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "280365c34f2668c1175906596ea574a9679c9a85",
+    "commitHash": "9e1d2b9d5e45a921ac0138daf234b5ef10adcb07",
     "paths": {
       "configPath": "/Users/jackbehar/Documents/Repos/Lumen-Chi-Merge/uxpin.config.js",
       "projectRoot": "/Users/jackbehar/Documents/Repos/Lumen-Chi-Merge"
