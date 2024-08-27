@@ -19,6 +19,7 @@ module.exports = {
           "src/components/_uxPin/ButtonGroup/ButtonGroup.jsx",
           "src/components/_uxPin/Modal/Modal.jsx",
           "src/components/_uxPin/Sidenav/Sidenav.jsx",
+          "src/components/_uxPin/Drawer/Drawer.jsx",
         ],
       },
       {
