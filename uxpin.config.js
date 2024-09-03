@@ -20,6 +20,7 @@ module.exports = {
           "src/components/_uxPin/Modal/Modal.jsx",
           "src/components/_uxPin/Sidenav/Sidenav.jsx",
           "src/components/_uxPin/Drawer/Drawer.jsx",
+          "src/components/_uxPin/Pagination/Pagination.jsx",
         ],
       },
       {
