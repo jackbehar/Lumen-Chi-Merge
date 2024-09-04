@@ -21,6 +21,8 @@ module.exports = {
           "src/components/_uxPin/Sidenav/Sidenav.jsx",
           "src/components/_uxPin/Drawer/Drawer.jsx",
           "src/components/_uxPin/Pagination/Pagination.jsx",
+          "src/components/_uxPin/Toolbar/Toolbar.jsx",
+          "src/components/Divider/Divider.js",
         ],
       },
       {

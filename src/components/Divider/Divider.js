@@ -1,8 +1,9 @@
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
+import * as PropTypes from "prop-types";
+import * as React from "react";
 
 /**
- * @uxpincomponent
+ * @uxpindocurl https://lib.lumen.com/chi/6.3.0/components/divider/
+ * @uxpindescription Dividers are lines that render a break or separation between content.
  */
 export default class Divider extends React.Component {
   render() {
@@ -10,11 +11,13 @@ export default class Divider extends React.Component {
       <div
         className={`
         chi-divider
-        ${this.props.colorbar ? '-colorbar' : ''}
-        ${this.props.label ? '-label' : ''}
-        ${this.props.size ? `-bt--${this.props.size}` : ''}
-      `}>
-        {this.props.label ? this.props.label : ''}
+        ${this.props.inverse ? "-inverse" : ""}
+        ${this.props.vertical ? "-vertical" : ""}
+        ${this.props.label ? "-label" : ""}
+        ${this.props.size ? `-bt--${this.props.size}` : ""}
+      `}
+      >
+        {this.props.label ? this.props.label : ""}
       </div>
     );
   }
@@ -22,12 +25,20 @@ export default class Divider extends React.Component {
 
 /* eslint-disable sort-keys */
 Divider.propTypes = {
-  colorbar: PropTypes.bool,
+  /**
+   * To render dividers on dark backgrounds.
+   */
+  inverse: PropTypes.bool,
+  /**
+   * Add text to a divider .
+   */
   label: PropTypes.string,
-  size: PropTypes.oneOf(['1', '2', '3', '4']),
-};
-/* eslint-enable sort-keys */
-
-Divider.defaultProps = {
-  colorbar: true,
+  /**
+   * Customize the dividers size .
+   */
+  size: PropTypes.oneOf(["1", "2", "3", "4"]),
+  /**
+   * To render a vertical divider. Ensure the parent container has a height specified.
+   */
+  vertical: PropTypes.bool,
 };

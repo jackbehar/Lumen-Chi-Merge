@@ -1,13 +1,10 @@
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
-import Label from '../Label/Label';
-import Icon from '../Icon/Icon';
-import { uuid4 } from '../../utils/utils';
-import {
-  LABEL_CLASSES,
-  STAT_CLASSES,
-} from '../../constants/classes';
-import './select.css';
+import * as PropTypes from "prop-types";
+import * as React from "react";
+import Label from "../Label/Label";
+import Icon from "../Icon/Icon";
+import { uuid4 } from "../../utils/utils";
+import { LABEL_CLASSES, STAT_CLASSES } from "../../constants/classes";
+import "./select.css";
 
 /* eslint-disable */
 /**
@@ -21,38 +18,40 @@ export default class Select extends React.Component {
 
   render() {
     let optionsToRender = [];
-    const info = this.props.info
-      ? (
-        <div className={`${STAT_CLASSES.TITLE_HELP}`}>
-          <Icon
-            uxpId={`infoIcon-${this.state.id}`}
-            icon={'circle-info-outline'}
-            size="xs"
-            color="primary"
-            mode="button"
-            popover={true}
-            popoverTitle={this.props.infoPopoverTitle}
-            popoverDescription={this.props.infoPopoverDescription}
-            popoverPosition={this.props.infoPopoverPosition}
-          />
-        </div>
-      ) : '';
-    const label = this.props.label
-      ? (
-        <Label
-          className="chi-label"
-          htmlFor={this.state.id}
-          required={this.props.required}
-          label={this.props.label}>
-        </Label>
-      )
-      : null;
+    const info = this.props.info ? (
+      <div className={`${STAT_CLASSES.TITLE_HELP}`}>
+        <Icon
+          uxpId={`infoIcon-${this.state.id}`}
+          icon={"circle-info-outline"}
+          size="xs"
+          color="primary"
+          mode="button"
+          popover={true}
+          popoverTitle={this.props.infoPopoverTitle}
+          popoverDescription={this.props.infoPopoverDescription}
+          popoverPosition={this.props.infoPopoverPosition}
+        />
+      </div>
+    ) : (
+      ""
+    );
+    const label = this.props.label ? (
+      <Label
+        className="chi-label"
+        htmlFor={this.state.id}
+        required={this.props.required}
+        label={this.props.label}
+      ></Label>
+    ) : null;
 
-    Array(16).fill()
+    Array(16)
+      .fill()
       .forEach((_, i) => {
         if (this.props[`option${i}`]) {
           optionsToRender.push(
-            <option value={i} selected={i === this.props.selectedOption}>{this.props[`option${i}`]}</option>
+            <option value={i} selected={i === this.props.selectedOption}>
+              {this.props[`option${i}`]}
+            </option>
           );
         }
       });
@@ -65,10 +64,14 @@ export default class Select extends React.Component {
 
     return (
       <div className="chi-form__item">
-        <div className={`${LABEL_CLASSES.WRAPPER}`}>
-          {label}
-          {info}
-        </div>
+        {this.props.label ? (
+          <div className={`${LABEL_CLASSES.WRAPPER}`}>
+            {label}
+            {info}
+          </div>
+        ) : (
+          ""
+        )}
         <select
           onClick={this.props.click}
           onFocus={this.props.focus}
@@ -80,8 +83,11 @@ export default class Select extends React.Component {
           onMouseOver={this.props.mouseOver}
           onMouseLeave={this.props.mouseLeave}
           id={this.state.id}
-          className={`chi-select ${this.props.size ? `-${this.props.size}` : ''}`}
-          disabled={this.props.disabled}>
+          className={`chi-select ${
+            this.props.size ? `-${this.props.size}` : ""
+          }`}
+          disabled={this.props.disabled}
+        >
           {optionsToRender}
         </select>
       </div>
@@ -90,19 +96,21 @@ export default class Select extends React.Component {
 }
 
 Select.propTypes = {
-  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
+  size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
   label: PropTypes.string,
-  required: PropTypes.oneOf(['none', 'required', 'optional']),
-  selectedOption: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]),
+  required: PropTypes.oneOf(["none", "required", "optional"]),
+  selectedOption: PropTypes.oneOf([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  ]),
   info: PropTypes.bool,
   infoPopoverTitle: PropTypes.string,
   /**
-    * A textArea controller for Text
-    * @uxpinpropname text
-    * @uxpincontroltype textfield(10)
-    * */
+   * A textArea controller for Text
+   * @uxpinpropname text
+   * @uxpincontroltype textfield(10)
+   * */
   infoPopoverDescription: PropTypes.string,
-  infoPopoverPosition: PropTypes.oneOf(['right-start', 'top']),
+  infoPopoverPosition: PropTypes.oneOf(["right-start", "top"]),
   /** @uxpinignoreprop */
   clickInfo: PropTypes.func,
   /** @uxpinignoreprop */
@@ -153,7 +161,7 @@ Select.propTypes = {
 /* eslint-enable */
 
 Select.defaultProps = {
-  size: 'md',
-  required: 'none',
+  size: "md",
+  required: "none",
   selectedOption: 1,
 };

@@ -1,5 +1,5 @@
-import * as PropTypes from 'prop-types';
-import React, { useEffect, useRef } from 'react';
+import * as PropTypes from "prop-types";
+import React, { useEffect, useRef } from "react";
 
 /* eslint-disable */
 /**
@@ -9,17 +9,19 @@ export default function SearchInput(props) {
   const chiSearchInput = useRef(null);
 
   useEffect(() => {
-    chiSearchInput.current.addEventListener('chiFocus', () => props.focus());
-    chiSearchInput.current.addEventListener('chiBlur', () => props.focusLost());
-    chiSearchInput.current.addEventListener('click', () => props.click());
-    chiSearchInput.current.addEventListener('chiChange', () => props.valueChange());
-    chiSearchInput.current.addEventListener('chiClean', () => props.clear());
-    chiSearchInput.current.addEventListener('chiInput', () => props.input());
-    chiSearchInput.current.addEventListener('chiSearch', () => props.search());
+    chiSearchInput.current.addEventListener("chiFocus", () => props.focus());
+    chiSearchInput.current.addEventListener("chiBlur", () => props.focusLost());
+    chiSearchInput.current.addEventListener("click", () => props.click());
+    chiSearchInput.current.addEventListener("chiChange", () =>
+      props.valueChange()
+    );
+    chiSearchInput.current.addEventListener("chiClean", () => props.clear());
+    chiSearchInput.current.addEventListener("chiInput", () => props.input());
+    chiSearchInput.current.addEventListener("chiSearch", () => props.search());
   });
 
   return (
-    <div ref={props.uxPinRef}>
+    <div ref={props.uxPinRef} className="chi-form__item">
       <chi-search-input
         size={props.size}
         disabled={props.disabled}
@@ -36,7 +38,7 @@ export default function SearchInput(props) {
 SearchInput.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
+  size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
   disabled: PropTypes.bool,
   clear: PropTypes.func,
   click: PropTypes.func,
@@ -50,5 +52,5 @@ SearchInput.propTypes = {
 
 SearchInput.defaultProps = {
   disabled: false,
-  size: 'md',
+  size: "md",
 };

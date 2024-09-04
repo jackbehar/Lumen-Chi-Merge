@@ -1,9 +1,9 @@
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
-import Label from '../Label/Label';
-import Icon from '../Icon/Icon';
-import { uuid4 } from '../../utils/utils';
-import { LABEL_CLASSES } from '../../constants/classes';
+import * as PropTypes from "prop-types";
+import * as React from "react";
+import Label from "../Label/Label";
+import Icon from "../Icon/Icon";
+import { uuid4 } from "../../utils/utils";
+import { LABEL_CLASSES } from "../../constants/classes";
 
 /**
  * @uxpincomponent
@@ -19,16 +19,16 @@ export default class TextInput extends React.Component {
       const textInput = document.getElementById(`${this.state.id}`);
       const self = this;
 
-      textInput.addEventListener('chiFocus', () => {
+      textInput.addEventListener("chiFocus", () => {
         self.props.focus();
       });
-      textInput.addEventListener('chiBlur', () => {
+      textInput.addEventListener("chiBlur", () => {
         self.props.focusLost();
       });
-      textInput.addEventListener('chiInput', () => {
+      textInput.addEventListener("chiInput", () => {
         self.props.input();
       });
-      textInput.addEventListener('chiChange', () => {
+      textInput.addEventListener("chiChange", () => {
         self.props.valueChange();
       });
     }, 1000);
@@ -50,20 +50,30 @@ export default class TextInput extends React.Component {
         />
       </div>
     ) : (
-      ''
+      ""
     );
     const label = this.props.label ? (
-      <Label htmlFor={this.state.id} required={this.props.required} label={this.props.label}></Label>
+      <Label
+        htmlFor={this.state.id}
+        required={this.props.required}
+        label={this.props.label}
+      ></Label>
     ) : null;
-    const states = ['success', 'warning', 'danger'];
-    const state = states.includes(this.props.helperMessageType) ? this.props.helperMessageType : '';
+    const states = ["success", "warning", "danger"];
+    const state = states.includes(this.props.helperMessageType)
+      ? this.props.helperMessageType
+      : "";
 
     return (
       <div className="chi-form__item">
-        <div className={`${LABEL_CLASSES.WRAPPER}`}>
-          {label}
-          {info}
-        </div>
+        {this.props.label ? (
+          <div className={`${LABEL_CLASSES.WRAPPER}`}>
+            {label}
+            {info}
+          </div>
+        ) : (
+          ""
+        )}
         <chi-text-input
           id={this.state.id}
           disabled={this.props.disabled}
@@ -92,12 +102,17 @@ TextInput.propTypes = {
    * @uxpinpropname field label
    * */
   label: PropTypes.string,
-  required: PropTypes.oneOf(['none', 'required', 'optional']),
+  required: PropTypes.oneOf(["none", "required", "optional"]),
   value: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   helperMessageText: PropTypes.string,
-  helperMessageType: PropTypes.oneOf(['default', 'success', 'warning', 'danger']),
+  helperMessageType: PropTypes.oneOf([
+    "default",
+    "success",
+    "warning",
+    "danger",
+  ]),
   /**
    * @uxpinpropname info icon
    * */
@@ -108,12 +123,30 @@ TextInput.propTypes = {
    * @uxpincontroltype textfield(10)
    * */
   infoPopoverDescription: PropTypes.string,
-  infoPopoverPosition: PropTypes.oneOf(['right-start', 'top']),
+  infoPopoverPosition: PropTypes.oneOf(["right-start", "top"]),
   iconLeft: PropTypes.string,
-  iconLeftColor: PropTypes.oneOf(['', 'primary', 'secondary', 'dark', 'light', 'danger', 'grey', 'muted']),
+  iconLeftColor: PropTypes.oneOf([
+    "",
+    "primary",
+    "secondary",
+    "dark",
+    "light",
+    "danger",
+    "grey",
+    "muted",
+  ]),
   iconRight: PropTypes.string,
-  iconRightColor: PropTypes.oneOf(['', 'primary', 'secondary', 'dark', 'light', 'danger', 'grey', 'muted']),
-  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
+  iconRightColor: PropTypes.oneOf([
+    "",
+    "primary",
+    "secondary",
+    "dark",
+    "light",
+    "danger",
+    "grey",
+    "muted",
+  ]),
+  size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
   /**
    * @uxpinpropname on click
    * */
@@ -160,8 +193,8 @@ TextInput.propTypes = {
 
 TextInput.defaultProps = {
   disabled: false,
-  required: 'none',
-  size: 'md',
-  helperMessageType: 'default',
-  placeholder: '',
+  required: "none",
+  size: "md",
+  helperMessageType: "default",
+  placeholder: "",
 };
