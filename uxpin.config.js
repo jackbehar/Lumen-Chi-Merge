@@ -128,4 +128,5 @@ module.exports = {
     webpackConfig: "uxpin.webpack.config.js",
   },
   name: "Example Design System",
+  settings: { useUXPinProps: true },
 };
