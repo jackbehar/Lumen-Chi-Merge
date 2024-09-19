@@ -4,6 +4,7 @@ module.exports = {
       {
         name: "UXPIN ADDED",
         include: [
+          "src/components/_uxPin/ThemeSwitcher/ThemeSwitcher.js",
           "src/components/_uxPin/Button/Button.jsx",
 
           "src/components/_uxPin/ExpansionPanelGroup/ExpansionPanelGroup.jsx",
