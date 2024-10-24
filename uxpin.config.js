@@ -24,6 +24,7 @@ module.exports = {
           "src/components/_uxPin/Pagination/Pagination.jsx",
           "src/components/_uxPin/Toolbar/Toolbar.jsx",
           "src/components/Divider/Divider.js",
+          "src/components/_uxPin/Popper/Popper.jsx",
         ],
       },
       {
