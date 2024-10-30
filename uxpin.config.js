@@ -2,6 +2,15 @@ module.exports = {
   components: {
     categories: [
       {
+        name: "Text Input Examples",
+        include: [
+          "src/components/Label/Label.js",
+          "src/components/Text-input/Text-input.js",
+          "src/components/FormItem/FormItem.js",
+          "src/components/TextInputWithLabel/TextInputWithLabel.js",
+        ],
+      },
+      {
         name: "UXPIN ADDED",
         include: [
           "src/components/_uxPin/ThemeSwitcher/ThemeSwitcher.js",
@@ -44,7 +53,7 @@ module.exports = {
           "src/components/Checkbox/Checkbox.js",
           "src/components/Date-picker/Date-picker.js",
           "src/components/File-input/File-input.js",
-          "src/components/Label/Label.js",
+          // "src/components/Label/Label.js",
           "src/components/Number-input/Number-input.js",
           "src/components/PhoneInput/PhoneInput.js",
           "src/components/Picker-multi/PickerMulti.js",
@@ -55,7 +64,7 @@ module.exports = {
           "src/components/Radio/Radio.js",
           "src/components/Search-input/Search-input.js",
           "src/components/Select/Select.js",
-          "src/components/Text-input/Text-input.js",
+          // "src/components/Text-input/Text-input.js",
           "src/components/Textarea/Textarea.js",
           "src/components/Time-picker/Time-picker.js",
           "src/components/Toggle-switch/Toggle-switch.js",

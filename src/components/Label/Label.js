@@ -1,98 +1,40 @@
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
-import Icon from '../Icon/Icon';
-import { uuid4 } from '../../utils/utils';
-import {
-  LABEL_CLASSES,
-  STAT_CLASSES,
-} from '../../constants/classes';
+import * as PropTypes from "prop-types";
+import React from "react";
+import ReactWrapper from "../UXPinWrapper/react-wrapper";
 
-/* eslint-disable */
 /**
- * @uxpincomponent
+ * @uxpindocurl https://lib.lumen.com/chi/6.3.0/components/label/
+ * @uxpindescription Use Label together with form control elements like input, select, checkbox, etc.
+.
  */
-export default class Label extends React.Component {
-  render() {
-    const uuid = uuid4();
-    const required = <abbr className={`${LABEL_CLASSES.REQUIRED}`} title="Required field">*</abbr>;
-    const optional = <abbr className={`${LABEL_CLASSES.OPTIONAL}`} title="Optional field">(optional)</abbr>;
-    let message = '';
+export default function Label(props) {
+  const WrappedLabel = ReactWrapper("chi-label");
 
-    if (!(this.props.required && this.props.optional)) {
-      if (this.props.required && this.props.required === 'required') {
-        message = required;
-      } else if (this.props.required && this.props.required === 'optional')  {
-        message = optional;
-      }
-    }
-
-    const info = this.props.info
-      ? (
-        <div className={`${STAT_CLASSES.TITLE_HELP}`}>
-          <Icon
-            uxpId={`infoIcon-${uuid}`}
-            icon={'circle-info-outline'}
-            size="xs"
-            color="primary"
-            mode="button"
-            popover={true}
-            popoverTitle={this.props.infoPopoverTitle}
-            popoverDescription={this.props.infoPopoverDescription}
-            popoverPosition={this.props.infoPopoverPosition}
-          />
-        </div>
-      )
-      : null;
-
-    return (
-      <label
-        className={`
-          chi-label
-          ${this.props.size ? `-${this.props.size}` : ``}
-          `}
-        htmlFor={`${this.for}-control`}
-        onClick={this.props.click}
-        onMouseEnter={this.props.mouseOver}
-        onMouseLeave={this.props.mouseLeave}
-        onMouseDown={this.props.mouseDown}
-        onMouseUp={this.props.mouseUp}
-      >
-        {this.props.label}
-        {message}
-        {info}
-      </label>
-    );
-  }
+  return <WrappedLabel {...props} />;
 }
 
+// Alert Component PropTypes
 Label.propTypes = {
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
-  label: PropTypes.string,
-  required: PropTypes.oneOf(['none', 'required', 'optional']),
-  click: PropTypes.func,
-  mouseDown: PropTypes.func,
-  mouseLeave: PropTypes.func,
-  mouseOver: PropTypes.func,
-  mouseUp: PropTypes.func,
-  info: PropTypes.bool,
-  infoPopoverTitle: PropTypes.string,
-  /**
-    * A textArea controller for Text
-    * @uxpinpropname text
-    * @uxpincontroltype textfield(10)
-    * */
-  infoPopoverDescription: PropTypes.string,
-  infoPopoverPosition: PropTypes.oneOf(['right-start', 'top']),
-  /** @uxpinignoreprop */
-  clickInfo: PropTypes.func,
-  /** @uxpinignoreprop */
-  mouseOverInfo: PropTypes.func,
-  /** @uxpinignoreprop */
-  mouseLeaveInfo: PropTypes.func,
-};
-/* eslint-enable */
+  /** To text of the Label
+   * @uxpinpropname Label
+   */
+  children: PropTypes.string,
 
-Label.defaultProps = {
-  size: 'md',
-  required: 'none',
+  /** To indicate ID of target form control web component */
+  for: PropTypes.string,
+
+  /** To indicate if info icon should be displayed */
+  infoIcon: PropTypes.bool,
+
+  /** To provide message for info icon popover */
+  infoIconMessage: PropTypes.string,
+
+  /** To indicate which form field is optional */
+  optional: PropTypes.bool,
+
+  /** To indicate which form field is required */
+  required: PropTypes.bool,
+
+  /** OPTIONAL. Size of the label. { xs, sm, md, lg, xl } */
+  size: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]),
 };

@@ -2,18 +2,64 @@ import * as PropTypes from "prop-types";
 import React from "react";
 import ReactWrapper from "../UXPinWrapper/react-wrapper";
 
-/**
- * @uxpindocurl https://lib.lumen.com/chi/6.3.0/components/forms/text-input/
- * @uxpindescription Text inputs are used for inputting single line text data.
- */
-export default function TextInput(props) {
+export default function TextInputWithLabel(props) {
   const WrappedTextInput = ReactWrapper("chi-text-input");
+  const WrappedTextLabel = ReactWrapper("chi-label");
 
-  return <WrappedTextInput {...props} />;
+  const {
+    inline,
+    label,
+    labelFor,
+    labelInfoIcon,
+    labelInfoIconMessage,
+    labelOptional,
+    labelRequired,
+    labelSize,
+    ...restProps
+  } = props;
+
+  return (
+    <div className={props.inline ? "chi-form__item -row" : "chi-form__item"}>
+      <WrappedTextLabel
+        required={labelRequired}
+        for={labelFor}
+        infoIcon={labelInfoIcon}
+        infoIconMessage={labelInfoIconMessage}
+        optional={labelOptional}
+        size={labelSize}
+      >
+        {label}
+      </WrappedTextLabel>
+      <WrappedTextInput {...restProps} />
+    </div>
+  );
 }
 
-// Alert Component PropTypes
-TextInput.propTypes = {
+TextInputWithLabel.propTypes = {
+  /** Display Label next to field */
+  inline: PropTypes.bool,
+
+  /** Text of label*/
+  label: PropTypes.node,
+
+  /** To indicate ID of target form control web component */
+  labelFor: PropTypes.string,
+
+  /** To indicate if info icon should be displayed*/
+  labelInfoIcon: PropTypes.bool,
+
+  /** To provide message for info icon popover */
+  labelInfoIconMessage: PropTypes.string,
+
+  /** To indicate which form field is optional */
+  labelOptional: PropTypes.bool,
+
+  /** To indicate which form field is required */
+  labelRequired: PropTypes.bool,
+
+  /** OPTIONAL. Size of the label. { xs, sm, md, lg, xl } */
+  labelSize: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]),
+
   /** To show copy text icon */
   copyText: PropTypes.bool,
 
